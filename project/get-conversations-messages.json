@@ -1,0 +1,1115 @@
+{
+  "entities": [
+    {
+      "id": "287c294d-8817-4db2-9c62-e346a937b054",
+      "participants": [
+        {
+          "id": "cd837458-d29c-406d-a546-52b2d52468d7",
+          "name": "test1",
+          "startTime": "2024-08-13T20:27:20.991Z",
+          "connectedTime": "2024-08-13T20:27:21.021Z",
+          "endTime": "2024-08-13T20:27:21.564Z",
+          "purpose": "workflow",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "859b4f8c-21d1-4fb1-8e3f-d0384e4eadc9",
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "1a5d7cd24e8da2543ba8b4055fc8e8b6",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/1a5d7cd24e8da2543ba8b4055fc8e8b6",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-13T20:27:21.466Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "56287217-4e31-4852-8545-62c5ee959124",
+          "name": "Gente",
+          "startTime": "2024-08-13T20:27:21.604Z",
+          "connectedTime": "2024-08-13T20:27:21.651Z",
+          "endTime": "2024-08-13T20:27:32.978Z",
+          "purpose": "acd",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "859b4f8c-21d1-4fb1-8e3f-d0384e4eadc9",
+          "conversationRoutingData": {
+            "queue": {
+              "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+              "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+            },
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": [],
+            "label": "631f0939-be32-495a-baf9-970abb039192"
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [],
+          "type": "open"
+        },
+        {
+          "id": "fc17b3f5-2dba-4665-8a71-431d64334fec",
+          "name": "test1",
+          "startTime": "2024-08-14T17:11:52.330Z",
+          "connectedTime": "2024-08-14T17:11:52.394Z",
+          "endTime": "2024-08-14T17:11:52.924Z",
+          "purpose": "workflow",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "28c07b0b-1c84-4543-b02a-33b1b571d78a",
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "92cee7f7573632c3f99561af2c9aab89",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/92cee7f7573632c3f99561af2c9aab89",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:11:52.821Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "bd0d349e-a772-4977-9c46-6d976fa6477a",
+          "name": "Gente",
+          "startTime": "2024-08-14T17:11:52.961Z",
+          "connectedTime": "2024-08-14T17:11:53.009Z",
+          "endTime": "2024-08-14T17:12:17.167Z",
+          "purpose": "acd",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "28c07b0b-1c84-4543-b02a-33b1b571d78a",
+          "conversationRoutingData": {
+            "queue": {
+              "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+              "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+            },
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": [],
+            "label": "631f0939-be32-495a-baf9-970abb039192"
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [],
+          "type": "open"
+        },
+        {
+          "id": "8e996f5a-1a0a-4dfd-ad59-75a40f40be1b",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:20.984Z",
+          "connectedTime": "2024-08-14T17:16:49.665Z",
+          "purpose": "customer",
+          "state": "connected",
+          "direction": "inbound",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [
+            "full"
+          ],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "f523bfab-fdf5-4684-8190-a67007a86280",
+          "toAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "fromAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "messages": [
+            {
+              "messageId": "e4c8a2d870ea1c380f1f1ce4a5ac5663",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/e4c8a2d870ea1c380f1f1ce4a5ac5663",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:16:49.655Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "1aa53956b69ea7b4fae47f852c5c8624",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/1aa53956b69ea7b4fae47f852c5c8624",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:19:24.078Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "6b7aa1f78c4fe8741d1579428b975e7d",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/6b7aa1f78c4fe8741d1579428b975e7d",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:38:26.002Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "30ec9b48f421d256867e84b5cd4c04cb",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/30ec9b48f421d256867e84b5cd4c04cb",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:40:55.212Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "1e9ad616a12a53f162439757c1265166",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/1e9ad616a12a53f162439757c1265166",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:50:10.316Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "cdf400b809a607419b31e0e39cbaad3f",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/cdf400b809a607419b31e0e39cbaad3f",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:54:06.459Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "d00fb2741dc3d0e43f1d03e95ec61344",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/d00fb2741dc3d0e43f1d03e95ec61344",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T18:11:44.739Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "8e996f5a-1a0a-4dfd-ad59-75a40f40be1b",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:20.984Z",
+          "connectedTime": "2024-08-14T17:11:52.342Z",
+          "endTime": "2024-08-14T17:16:42.711Z",
+          "purpose": "customer",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "peer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [
+            "full"
+          ],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "36aadaac-1fcb-47c4-8e3d-895f62da6a63",
+          "toAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "fromAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "messages": [
+            {
+              "messageId": "7c5719cc27d246e485def103ad717ce7",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/7c5719cc27d246e485def103ad717ce7",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:11:52.322Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "264dfe4e67e943c22573ace5de139ecd",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/264dfe4e67e943c22573ace5de139ecd",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:15:39.872Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "8e996f5a-1a0a-4dfd-ad59-75a40f40be1b",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:20.984Z",
+          "connectedTime": "2024-08-13T20:27:20.995Z",
+          "endTime": "2024-08-14T15:03:27.346Z",
+          "purpose": "customer",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "peer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [
+            "full"
+          ],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "2b61ea5e-6593-44cc-afe9-7bf0530778c9",
+          "toAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "fromAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "messages": [
+            {
+              "messageId": "23fecb39fb962db252810814a8f98e93",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/23fecb39fb962db252810814a8f98e93",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-13T20:27:20.984Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "45fd90f3-b9a5-45ce-85d1-778086765615",
+          "name": "test1",
+          "startTime": "2024-08-14T17:16:49.663Z",
+          "connectedTime": "2024-08-14T17:16:49.692Z",
+          "endTime": "2024-08-14T17:16:50.093Z",
+          "purpose": "workflow",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "3d9815c5-d042-4030-b9c4-22060f34fda0",
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "3c6a5af0305afb32199cfa03b8ff2d01",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/3c6a5af0305afb32199cfa03b8ff2d01",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:16:49.998Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "045567c9-0806-45cf-a088-8fab450f09e5",
+          "name": "Gente",
+          "startTime": "2024-08-14T17:16:50.131Z",
+          "connectedTime": "2024-08-14T17:16:50.190Z",
+          "endTime": "2024-08-14T17:16:55.330Z",
+          "purpose": "acd",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "3d9815c5-d042-4030-b9c4-22060f34fda0",
+          "conversationRoutingData": {
+            "queue": {
+              "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+              "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+            },
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": [],
+            "label": "631f0939-be32-495a-baf9-970abb039192"
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [],
+          "type": "open"
+        },
+        {
+          "id": "548a44e0-4852-4ea0-a813-58aaaff501f8",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:21.775Z",
+          "connectedTime": "2024-08-14T17:16:55.340Z",
+          "purpose": "agent",
+          "state": "connected",
+          "direction": "inbound",
+          "held": false,
+          "wrapupRequired": true,
+          "wrapupPrompt": "optional",
+          "mediaRoles": [
+            "full"
+          ],
+          "user": {
+            "id": "82b56df4-a946-4ce8-8412-b53721b40882",
+            "selfUri": "/api/v2/users/82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "team": {
+            "id": "274697c2-a60d-4b46-a474-0d9ce87a53fd",
+            "selfUri": "/api/v2/teams/274697c2-a60d-4b46-a474-0d9ce87a53fd"
+          },
+          "attributes": {},
+          "alertingTimeoutMs": 30000,
+          "provider": "PureCloud Messaging",
+          "peer": "3d9815c5-d042-4030-b9c4-22060f34fda0",
+          "conversationRoutingData": {
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": []
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "2e0934be0d535a29a780b147c02404e6",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/2e0934be0d535a29a780b147c02404e6",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:17:17.006Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "9a388e749b4557cacdcc66c592d445ba",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/9a388e749b4557cacdcc66c592d445ba",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:50:47.882Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "a81167ae5ea669f9e9a23dbc24c078a2",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/a81167ae5ea669f9e9a23dbc24c078a2",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T18:20:41.898Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "548a44e0-4852-4ea0-a813-58aaaff501f8",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:21.775Z",
+          "connectedTime": "2024-08-14T17:12:17.177Z",
+          "endTime": "2024-08-14T17:16:42.695Z",
+          "purpose": "agent",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "client",
+          "held": false,
+          "wrapupRequired": true,
+          "wrapupPrompt": "optional",
+          "mediaRoles": [
+            "full"
+          ],
+          "user": {
+            "id": "82b56df4-a946-4ce8-8412-b53721b40882",
+            "selfUri": "/api/v2/users/82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "team": {
+            "id": "274697c2-a60d-4b46-a474-0d9ce87a53fd",
+            "selfUri": "/api/v2/teams/274697c2-a60d-4b46-a474-0d9ce87a53fd"
+          },
+          "attributes": {},
+          "alertingTimeoutMs": 30000,
+          "provider": "PureCloud Messaging",
+          "peer": "28c07b0b-1c84-4543-b02a-33b1b571d78a",
+          "conversationRoutingData": {
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": []
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "f896e78984338f54e10ddf3b0aa1fe87",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/f896e78984338f54e10ddf3b0aa1fe87",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:12:34.846Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "9650e981caabaff5d5925e33f37c785e",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/9650e981caabaff5d5925e33f37c785e",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:15:17.044Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "f0912213a3130fd498edec8d8bc9e01c",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/f0912213a3130fd498edec8d8bc9e01c",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:16:04.219Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "349eb5e70e5bcc4233e01df237a098f2",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/349eb5e70e5bcc4233e01df237a098f2",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:16:06.352Z",
+              "media": [
+                {
+                  "url": "https://api-downloads.sae1.pure.cloud/api/v2/downloads/pce279dad61a8cfba5e",
+                  "mediaType": "image/png",
+                  "contentLengthBytes": 262795,
+                  "name": "Screenshot 2024-08-09 114219.png",
+                  "id": "b8218ec3-fa37-4ca7-9c98-35185bd5419d"
+                }
+              ],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": [
+                  {
+                    "contentType": "Attachment",
+                    "subType": "Image"
+                  }
+                ]
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "548a44e0-4852-4ea0-a813-58aaaff501f8",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-13T20:27:21.775Z",
+          "connectedTime": "2024-08-13T20:27:32.987Z",
+          "endTime": "2024-08-14T15:03:27.334Z",
+          "purpose": "agent",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "client",
+          "held": false,
+          "wrapupRequired": true,
+          "wrapupPrompt": "optional",
+          "mediaRoles": [
+            "full"
+          ],
+          "user": {
+            "id": "82b56df4-a946-4ce8-8412-b53721b40882",
+            "selfUri": "/api/v2/users/82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "team": {
+            "id": "274697c2-a60d-4b46-a474-0d9ce87a53fd",
+            "selfUri": "/api/v2/teams/274697c2-a60d-4b46-a474-0d9ce87a53fd"
+          },
+          "attributes": {},
+          "alertingTimeoutMs": 30000,
+          "provider": "PureCloud Messaging",
+          "peer": "859b4f8c-21d1-4fb1-8e3f-d0384e4eadc9",
+          "conversationRoutingData": {
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": []
+          },
+          "toAddress": {
+            "name": "Nahuel Marrero",
+            "addressNormalized": "nahuelm210@gmail.com",
+            "addressRaw": "nahuelm210@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "e5c3a2ca4d6f2ae22f7bdec654bd73f4",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/e5c3a2ca4d6f2ae22f7bdec654bd73f4",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-13T20:29:02.346Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "79766e65160ac87e80b69d29bbe8127d",
+              "messageURI": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054/messages/79766e65160ac87e80b69d29bbe8127d",
+              "messageStatus": "delivery-failed",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T15:00:38.020Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              },
+              "errorInfo": {
+                "message": "Message delivery failed with the following payload: [GeneralError - Request failed with status code 404]",
+                "code": "DELIVERY_FAILED",
+                "messageWithParams": "Message delivery failed with the following payload: [{errorPayload}]",
+                "messageParams": {
+                  "errorPayload": "GeneralError - Request failed with status code 404"
+                },
+                "details": [],
+                "errors": []
+              }
+            }
+          ],
+          "type": "open"
+        }
+      ],
+      "otherMediaUris": [],
+      "recentTransfers": [
+        {
+          "id": "0ad54f80-22d3-4257-b4ab-36d98cde3c74",
+          "state": "Complete",
+          "dateIssued": "2024-08-13T20:27:21.548Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {},
+          "transferType": "Unattended"
+        },
+        {
+          "id": "dd504ed6-356f-4c41-85cb-6039cd83e0ea",
+          "state": "Complete",
+          "dateIssued": "2024-08-13T20:27:21.723Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {
+            "userId": "82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "transferType": "Attended"
+        },
+        {
+          "id": "c0740963-0b46-4b96-9be6-e9da2e34776a",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:11:52.904Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {},
+          "transferType": "Unattended"
+        },
+        {
+          "id": "c37c4f65-313a-46e4-93c9-c9fe5c0f018f",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:12:14.847Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {
+            "userId": "82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "transferType": "Attended"
+        },
+        {
+          "id": "05f7b654-2ea4-4627-bfc1-43141e8459ee",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:16:50.074Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {},
+          "transferType": "Unattended"
+        },
+        {
+          "id": "d6e6031a-df69-4b64-844c-7921f30e75d8",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:16:50.238Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {
+            "userId": "82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "transferType": "Attended"
+        }
+      ],
+      "utilizationLabelId": "631f0939-be32-495a-baf9-970abb039192",
+      "selfUri": "/api/v2/conversations/messages/287c294d-8817-4db2-9c62-e346a937b054"
+    },
+    {
+      "id": "3043c989-c20c-4276-8d61-b55b52c657c0",
+      "participants": [
+        {
+          "id": "5ba77806-7b8d-436c-b453-3406639dc0ee",
+          "name": "Nahuel2 Marrero",
+          "startTime": "2024-08-14T17:22:06.512Z",
+          "connectedTime": "2024-08-14T17:22:06.527Z",
+          "purpose": "customer",
+          "state": "connected",
+          "direction": "inbound",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [
+            "full"
+          ],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "56254c0c-62e4-4d9d-a3d2-31986bdc98cb",
+          "toAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "fromAddress": {
+            "name": "Nahuel2 Marrero",
+            "addressNormalized": "nahuel.marrero.telefax@gmail.com",
+            "addressRaw": "nahuel.marrero.telefax@gmail.com"
+          },
+          "messages": [
+            {
+              "messageId": "d721a2aeeba6d4734a70677ebfa6e20a",
+              "messageURI": "/api/v2/conversations/messages/3043c989-c20c-4276-8d61-b55b52c657c0/messages/d721a2aeeba6d4734a70677ebfa6e20a",
+              "messageStatus": "received",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:22:06.512Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "7e7dec86-014e-4cdf-9ec8-2b13768146b4",
+          "name": "test1",
+          "startTime": "2024-08-14T17:22:06.518Z",
+          "connectedTime": "2024-08-14T17:22:06.555Z",
+          "endTime": "2024-08-14T17:22:06.951Z",
+          "purpose": "workflow",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "167a0437-410b-4c48-a348-c2f8ddcc0351",
+          "toAddress": {
+            "name": "Nahuel2 Marrero",
+            "addressNormalized": "nahuel.marrero.telefax@gmail.com",
+            "addressRaw": "nahuel.marrero.telefax@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "d010cbdb8b32dd33cf2c1ba4d36368e7",
+              "messageURI": "/api/v2/conversations/messages/3043c989-c20c-4276-8d61-b55b52c657c0/messages/d010cbdb8b32dd33cf2c1ba4d36368e7",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:22:06.883Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        },
+        {
+          "id": "54223a39-6400-4a56-8609-ef6d3bb17831",
+          "name": "Gente",
+          "startTime": "2024-08-14T17:22:06.991Z",
+          "connectedTime": "2024-08-14T17:22:07.071Z",
+          "endTime": "2024-08-14T17:22:11.506Z",
+          "purpose": "acd",
+          "state": "disconnected",
+          "direction": "inbound",
+          "disconnectType": "transfer",
+          "held": false,
+          "wrapupRequired": false,
+          "mediaRoles": [],
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "attributes": {},
+          "provider": "PureCloud Messaging",
+          "peer": "167a0437-410b-4c48-a348-c2f8ddcc0351",
+          "conversationRoutingData": {
+            "queue": {
+              "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+              "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+            },
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": [],
+            "label": "631f0939-be32-495a-baf9-970abb039192"
+          },
+          "toAddress": {
+            "name": "Nahuel2 Marrero",
+            "addressNormalized": "nahuel.marrero.telefax@gmail.com",
+            "addressRaw": "nahuel.marrero.telefax@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [],
+          "type": "open"
+        },
+        {
+          "id": "90e675d7-1267-4ad8-a537-ca5aa94eca53",
+          "name": "Nahuel Marrero",
+          "startTime": "2024-08-14T17:22:07.166Z",
+          "connectedTime": "2024-08-14T17:22:11.518Z",
+          "startHoldTime": "2024-08-14T17:38:29.741Z",
+          "purpose": "agent",
+          "state": "connected",
+          "direction": "inbound",
+          "held": true,
+          "wrapupRequired": true,
+          "wrapupPrompt": "optional",
+          "mediaRoles": [
+            "full"
+          ],
+          "user": {
+            "id": "82b56df4-a946-4ce8-8412-b53721b40882",
+            "selfUri": "/api/v2/users/82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "queue": {
+            "id": "39869fa0-e4ed-4646-b763-08b575b72c59",
+            "selfUri": "/api/v2/routing/queues/39869fa0-e4ed-4646-b763-08b575b72c59"
+          },
+          "team": {
+            "id": "274697c2-a60d-4b46-a474-0d9ce87a53fd",
+            "selfUri": "/api/v2/teams/274697c2-a60d-4b46-a474-0d9ce87a53fd"
+          },
+          "attributes": {},
+          "alertingTimeoutMs": 30000,
+          "provider": "PureCloud Messaging",
+          "peer": "167a0437-410b-4c48-a348-c2f8ddcc0351",
+          "conversationRoutingData": {
+            "priority": 0,
+            "skills": [],
+            "scoredAgents": []
+          },
+          "toAddress": {
+            "name": "Nahuel2 Marrero",
+            "addressNormalized": "nahuel.marrero.telefax@gmail.com",
+            "addressRaw": "nahuel.marrero.telefax@gmail.com"
+          },
+          "fromAddress": {
+            "name": "Test Open message",
+            "addressNormalized": "21732265-c47a-4c76-a877-d5f033129382"
+          },
+          "messages": [
+            {
+              "messageId": "34ef91c02e66a48a0e196089afa8456f",
+              "messageURI": "/api/v2/conversations/messages/3043c989-c20c-4276-8d61-b55b52c657c0/messages/34ef91c02e66a48a0e196089afa8456f",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:22:17.858Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            },
+            {
+              "messageId": "febf37b781d027a847c59a5fbbb2a2dc",
+              "messageURI": "/api/v2/conversations/messages/3043c989-c20c-4276-8d61-b55b52c657c0/messages/febf37b781d027a847c59a5fbbb2a2dc",
+              "messageStatus": "sent",
+              "messageSegmentCount": 1,
+              "messageTime": "2024-08-14T17:22:56.644Z",
+              "media": [],
+              "stickers": [],
+              "messageMetadata": {
+                "type": "Text",
+                "events": [],
+                "content": []
+              }
+            }
+          ],
+          "type": "open"
+        }
+      ],
+      "otherMediaUris": [],
+      "recentTransfers": [
+        {
+          "id": "38d2be24-4309-49bc-ba9e-f1a7f4948982",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:22:06.937Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {},
+          "transferType": "Unattended"
+        },
+        {
+          "id": "8f332e64-d4f7-48b1-8716-84cc0dc183f6",
+          "state": "Complete",
+          "dateIssued": "2024-08-14T17:22:07.119Z",
+          "initiator": {},
+          "modifiedBy": {},
+          "destination": {
+            "userId": "82b56df4-a946-4ce8-8412-b53721b40882"
+          },
+          "transferType": "Attended"
+        }
+      ],
+      "utilizationLabelId": "631f0939-be32-495a-baf9-970abb039192",
+      "selfUri": "/api/v2/conversations/messages/3043c989-c20c-4276-8d61-b55b52c657c0"
+    }
+  ],
+  "pageSize": 2,
+  "pageNumber": 1,
+  "total": 2,
+  "lastUri": "/api/v2/conversations/messages?pageSize=2&pageNumber=1",
+  "firstUri": "/api/v2/conversations/messages?pageSize=2&pageNumber=1",
+  "selfUri": "/api/v2/conversations/messages?pageSize=2&pageNumber=1",
+  "pageCount": 1
+}
