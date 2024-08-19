@@ -2,13 +2,12 @@
  * An example Express NodeJS app that 
  * implements Genesys Cloud Open Messaging
  */
-const express = require("express")
+const express = require("express");
 const crypto = require('crypto');
 const https = require('https');
 const localtunnel = require('localtunnel');
 const {v4: uuidv4} = require('uuid');
 const config = require('./config.js');
-const { access } = require("fs");
 const fs = require('fs');
 const path = require('path');
 const WebSocket = require('ws').Server;
@@ -23,8 +22,16 @@ let accessToken = null;
 const messageDeploymentId = '21732265-c47a-4c76-a877-d5f033129382';
 
 // Initialize express and define a port
-const app = express()
-const PORT = 5501
+const app = express();
+const PORT = 443;
+
+
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/tftesting.ddns.net/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/tftesting.ddns.net/fullchain.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/tftesting.ddns.net/chain.pem', 'utf8');
+
+const credentials = { key: privateKey, cert: certificate, ca: ca };
+
 
 // Reserved domain name for Local Tunnel
 const LT_SUBDOMAIN = 'test-telefax';
@@ -32,7 +39,7 @@ const LT_SUBDOMAIN = 'test-telefax';
 const ExtSessionId = uuidv4();
 
 // Tell express to use body-parser's JSON parsing
-app.use(express.json())
+app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
@@ -40,6 +47,7 @@ app.use(express.static('web'));
 
 let transcript = [];
 let tableId = new Map();
+
 wss.getUniqueID = function () {
     function s4() {
         return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
@@ -75,19 +83,10 @@ wss.on('connection', function connection(ws) {
             "message": message
         }
 
-        
         try {
             sendMessageToGenesys(body);
         } catch(e) {}
- 
 
-        
-        // wss.clients.forEach(function each(client) {
-        //     console.log('Client.ID: ' + client.id);
-        //     client.send(client.id);
-        // });
-
-        
     });
 
 });
@@ -99,14 +98,14 @@ wss.on('connection', function connection(ws) {
 
 function authenticate() {
     client.setEnvironment(platformClient.PureCloudRegionHosts.sa_east_1);
-    client.loginClientCredentialsGrant(config.clientId,config.clientSecret)
+    client.loginClientCredentialsGrant(config.clientId, config.clientSecret)
     .then((data)=> {
-        // Do authenticated things
         accessToken = data.accessToken;
 
-        // Start express on the defined port
-        app.listen(PORT, () => {
-            console.log(`Server listenign on local port ${PORT}`);
+        // Start HTTPS server on the defined port
+        const httpsServer = https.createServer(credentials, app);
+        httpsServer.listen(PORT, () => {
+            console.log(`HTTPS Server running on port ${PORT}`);
 
             // Start Local Tunnel for public internet access
             (async () => {
@@ -130,36 +129,24 @@ function authenticate() {
     });
 }
 
-function wrtieToLogFile(text){
+function wrtieToLogFile(text) {
     const formattedLogEntry = `[${new Date().toISOString()}] ${text}\n`
-    fs.appendFile("./app.log", formattedLogEntry, (err)=>{
-        
-        if(err)
-            console.error("Error writin to log file: ")
-    })
+    fs.appendFile("./app.log", formattedLogEntry, (err) => {
+        if (err)
+            console.error("Error writing to log file: ", err);
+    });
 }
+
 /*****************************************************************
  * This route is used when Genesys sends a message to the end user
  */
-
-
 app.post("/messageFromGenesys", (req, res) => {
-
     console.warn("received a message from Genesys");
     wrtieToLogFile("Headers: " + JSON.stringify(req.headers));
     wrtieToLogFile("Body: " + JSON.stringify(req.body));
     wrtieToLogFile("Path: " + JSON.stringify(req.path));
-    // const normalizedMessage = req.body;
-    // const signature = req.headers['x-hub-signature-256'];
-    // const secretToken = 'MySecretTokenNahuel';
-    // const messageHash = crypto.createHmac('sha256', secretToken)
-    //     .update(JSON.stringify(normalizedMessage))
-    //     .digest('base64');
 
-    // if (`sha256=${messageHash}` === signature) {
-    //     console.info(JSON.stringify(req.headers));
-    //     console.log(req.body) // Call your action on the request here
-    if(req.body.channel.from.nickname === "Test Open message"){
+    if(req.body.channel.from.nickname === "Test Open message") {
         let to = req.body.channel.to.id;
         let id = tableId.get(to);
         if(id != undefined){
@@ -175,35 +162,27 @@ app.post("/messageFromGenesys", (req, res) => {
                 message: req.body.text,
                 purpose: "agent"
             });
-        // } else {
-        //     console.err("Webhook Validation Failed!");
-        // }
-
-        
     }
-    res.status(200).end() // Responding is important
+    res.status(200).end(); // Responding is important
 });
 
 /******************************************************************
  * This route is used for the end user to send a message to Genesys
  */
 app.post("/messageToGenesys", (req, res) => {
-    
     try {
         sendMessageToGenesys(req.body);
     } catch(e) {
         // TODO: do some error handling
     }
-
-    res.status(200).end() // Responding is important
+    res.status(200).end(); // Responding is important
 });
 
 /********************************************************************
  * Implement the code to send a message to Genesys Open Messaging API
  */
 function sendMessageToGenesys(data) {
-
-    if ( data.message === '' ) {
+    if (data.message === '') {
         console.log("No message to send");
         return;
     }
@@ -230,26 +209,25 @@ function sendMessageToGenesys(data) {
         "type": "Text",
         "text": data.message,
         "direction": "Inbound",
-      });
-      
-      const options = {
+    });
+
+    const options = {
         hostname: 'api.sae1.pure.cloud',
         port: 443,
-        //ver si este es efectivamente el endpoint que necesitamos.
         path: '/api/v2/conversations/messages/inbound/open',
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Content-Length': body.length,
-          'Authorization': 'bearer ' + accessToken
+            'Content-Type': 'application/json',
+            'Content-Length': body.length,
+            'Authorization': 'bearer ' + accessToken
         }
-      }
-      
-      console.log("options: " + JSON.stringify(options));
-      console.log("body: " + body);
+    };
+  
+    console.log("options: " + JSON.stringify(options));
+    console.log("body: " + body);
 
-      const apireq = https.request(options, res => {
-        console.log(`statusCode: ${res.statusCode}`)
+    const apireq = https.request(options, res => {
+        console.log(`statusCode: ${res.statusCode}`);
       
         res.on('data', d => {
             console.log("datachunk");
@@ -262,15 +240,15 @@ function sendMessageToGenesys(data) {
                 message: data.message,
                 purpose: "customer"
             });
-        })
-      })
-      
-      apireq.on('error', error => {
-        console.error(error)
-      })
-      
-      apireq.write(body)
-      apireq.end()
+        });
+    });
+  
+    apireq.on('error', error => {
+        console.error(error);
+    });
+  
+    apireq.write(body);
+    apireq.end();
 }
 
 /******************************************************************
