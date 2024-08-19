@@ -11,17 +11,20 @@ const config = require('./config.js');
 const { access } = require("fs");
 const fs = require('fs');
 const path = require('path');
+const WebSocket = require('ws').Server;
 // Gotta have the Genesys Cloud Platform API
 const platformClient = require('purecloud-platform-client-v2');
+const wss = new WebSocket({ port: 8080 });
+
 const client = platformClient.ApiClient.instance;
 
-var accessToken = null;
+let accessToken = null;
 
 const messageDeploymentId = '21732265-c47a-4c76-a877-d5f033129382';
 
 // Initialize express and define a port
 const app = express()
-const PORT = 5500
+const PORT = 5501
 
 // Reserved domain name for Local Tunnel
 const LT_SUBDOMAIN = 'test-telefax';
@@ -35,7 +38,59 @@ app.use(express.urlencoded({
 }));
 app.use(express.static('web'));
 
-var transcript = [];
+let transcript = [];
+let tableId = new Map();
+wss.getUniqueID = function () {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    }
+    return s4() + s4() + '-' + s4();
+};
+
+wss.on('connection', function connection(ws) {
+    let id = wss.getUniqueID();
+    ws.id = id;
+    //tableId.set(, id);
+    ws.once('message', function addToTable(data){
+        let emailID = data.toString().split("\n")[0] + " ";
+        emailID = emailID.trim();
+        tableId.set(emailID, id + "_" + emailID);
+        console.warn(tableId.get(emailID));
+    });
+
+    ws.on('message', function message(data) {
+        let emailID = data.toString().split("\n")[0] + " ";
+        let dataSplitted = data.toString().split("\n");
+        let message = "";
+        for (let index = 1; index < dataSplitted.length; index++) {
+            message += (dataSplitted[index])+" ";
+        }
+        console.log(message);
+        body = {
+            "nickname": "NahuelM",
+            "id": emailID.trim(),
+            "idType": "email",
+            "firstName": "Nahuel",
+            "lastName": "Marrero",
+            "message": message
+        }
+
+        
+        try {
+            sendMessageToGenesys(body);
+        } catch(e) {}
+ 
+
+        
+        // wss.clients.forEach(function each(client) {
+        //     console.log('Client.ID: ' + client.id);
+        //     client.send(client.id);
+        // });
+
+        
+    });
+
+});
 
 /***************************************************
  * Authenticate with Genesys Cloud using an
@@ -80,20 +135,20 @@ function wrtieToLogFile(text){
     fs.appendFile("./app.log", formattedLogEntry, (err)=>{
         
         if(err)
-            console.error("Error writin to log file: ", err)
+            console.error("Error writin to log file: ")
     })
 }
 /*****************************************************************
  * This route is used when Genesys sends a message to the end user
  */
+
+
 app.post("/messageFromGenesys", (req, res) => {
 
     console.warn("received a message from Genesys");
-    wrtieToLogFile(req.headers);
-    wrtieToLogFile(req.body);
-    wrtieToLogFile(req.params);
-    wrtieToLogFile("--------------------------------------------")
-    // verify message signature
+    wrtieToLogFile("Headers: " + JSON.stringify(req.headers));
+    wrtieToLogFile("Body: " + JSON.stringify(req.body));
+    wrtieToLogFile("Path: " + JSON.stringify(req.path));
     // const normalizedMessage = req.body;
     // const signature = req.headers['x-hub-signature-256'];
     // const secretToken = 'MySecretTokenNahuel';
@@ -104,15 +159,28 @@ app.post("/messageFromGenesys", (req, res) => {
     // if (`sha256=${messageHash}` === signature) {
     //     console.info(JSON.stringify(req.headers));
     //     console.log(req.body) // Call your action on the request here
-        transcript.push({
-            sender: "Operador",
-            message: req.body.text,
-            purpose: "agent"
+    if(req.body.channel.from.nickname === "Test Open message"){
+        let to = req.body.channel.to.id;
+        let id = tableId.get(to);
+        if(id != undefined){
+            id = id.split("_")[0];
+        }
+        wss.clients.forEach(function each(client) {
+            if(client.id === id)
+                client.send(req.body.text);
         });
-    // } else {
-    //     console.err("Webhook Validation Failed!");
-    // }
+        console.error("TO: "+to);
+            transcript.push({
+                sender: "Operador",
+                message: req.body.text,
+                purpose: "agent"
+            });
+        // } else {
+        //     console.err("Webhook Validation Failed!");
+        // }
 
+        
+    }
     res.status(200).end() // Responding is important
 });
 
@@ -139,8 +207,6 @@ function sendMessageToGenesys(data) {
         console.log("No message to send");
         return;
     }
-    console.log("Sending message to Genesys: " + JSON.stringify(data));
-    console.warn(ExtSessionId);
     var d = new Date();
 
     const body = JSON.stringify({
@@ -213,7 +279,7 @@ function sendMessageToGenesys(data) {
 app.get("/transcript", (req, res) => {
     res.write(JSON.stringify(transcript));
     res.status(200).end();
-    transcript = [];
+    //transcript = [];
 });
 
 authenticate();

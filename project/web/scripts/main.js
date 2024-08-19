@@ -11,26 +11,26 @@ let genesysCloudLanguage = 'en-us';
 let translateKey = '';
 
 const intervalId = setInterval(function(){ 
-    try {
-        $.ajax({
-            type: "GET",
-            url: "/transcript",
-            success: function(data) {
-                if (data !== '[]') {
-                    console.log("transcript: " + JSON.stringify(data));
-                    var transcript = JSON.parse(data);
-                    transcript.forEach((item) => {
-                        view.addChatMessage(item.sender, item.message, item.purpose);
-                    })
-                }
-            },
-            error: function(xhr, status, err) {
-                console.log(err);
-            }
-        });
-    } catch(e) {
-        console.log(e);
-    }
+    // try {
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "/transcript",
+    //         success: function(data) {
+    //             if (data !== '[]') {
+    //                 console.log("transcript: " + JSON.stringify(data));
+    //                 var transcript = JSON.parse(data);
+    //                 transcript.forEach((item) => {
+    //                     view.addChatMessage(item.sender, item.message, item.purpose);
+    //                 })
+    //             }
+    //         },
+    //         error: function(xhr, status, err) {
+    //             console.log(err);
+    //         }
+    //     });
+    // } catch(e) {
+    //     console.log(e);
+    // }
 
 }, 1000);
 
@@ -77,7 +77,7 @@ function sendChat(){
             url: "/messageToGenesys",
             data: {
                 "nickname": "NahuelM",
-                "id": "nahuelm210@gmail.com",
+                "id": "nahuel.marrero.telefax@gmail.com",
                 "idType": "email",
                 "firstName": "Nahuel",
                 "lastName": "Marrero",
